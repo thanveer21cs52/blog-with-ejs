@@ -1,0 +1,9 @@
+<%- include("partials/header")%>  
+<h1>Home</h1>
+<p><%=home%></p>
+<%postcontent.forEach(compost => {%>
+   <h1><%=compost.title%></h1>
+   <p><%=(compost.postin).substring(0, 100)+" ... "%><a href="/posts/<%=compost.title%>">Read more</a></p>
+    
+<%});%>
+<%- include("partials/footer")%>
